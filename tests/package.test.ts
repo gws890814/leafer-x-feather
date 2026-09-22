@@ -17,6 +17,7 @@ test('package metadata exposes only the public runtime surface', async () => {
 
   assert.equal(packageJson.license, 'MIT')
   assert.equal(packageJson.publishConfig.access, 'public')
+  assert.equal(packageJson.repository.url, 'git+https://github.com/gws890814/leafer-x-feather.git')
   assert.deepEqual(packageJson.exports['./package.json'], './package.json')
   assert.deepEqual(packageJson.files, [
     'dist', 'types', 'README.md', 'CHANGELOG.md', 'CONTRIBUTING.md', 'LICENSE',

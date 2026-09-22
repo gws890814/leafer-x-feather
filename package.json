@@ -1,6 +1,6 @@
 {
   "name": "@choo/leafer-x-feather",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "LeaferJS 的非破坏性轮廓羽化滤镜，支持多半径叠加与原生 JSON",
   "keywords": [
     "leaferjs",
@@ -11,6 +11,14 @@
     "graphics"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gws890814/leafer-x-feather.git"
+  },
+  "homepage": "https://github.com/gws890814/leafer-x-feather#readme",
+  "bugs": {
+    "url": "https://github.com/gws890814/leafer-x-feather/issues"
+  },
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
