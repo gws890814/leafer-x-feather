@@ -2,6 +2,12 @@
 
 LeaferJS 的非破坏性轮廓羽化滤镜。它通过 Leafer 原生 `Filter.register()` 扩展点工作，支持图片、纯色、渐变、描边、路径、容器、内外阴影和原生 JSON。
 
+> **AI 辅助开发声明**
+>
+> 本项目在方案分析、代码实现、测试和文档整理过程中使用了 **OpenAI Codex** 作为 AI 辅助工具；最终代码与发布内容由项目维护者审核和负责。
+
+GitHub 仓库：[gws890814/leafer-x-feather](https://github.com/gws890814/leafer-x-feather)
+
 ## 特性
 
 - 不修改源路径、图片、颜料或作者数据
@@ -15,6 +21,12 @@ LeaferJS 的非破坏性轮廓羽化滤镜。它通过 Leafer 原生 `Filter.reg
 
 ```bash
 npm install @choo/leafer-x-feather @leafer-in/filter leafer-ui
+```
+
+也可以直接获取源码：
+
+```bash
+git clone https://github.com/gws890814/leafer-x-feather.git
 ```
 
 包入口会自动注册滤镜，业务代码只需导入一次：
