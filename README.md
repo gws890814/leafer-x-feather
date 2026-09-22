@@ -8,6 +8,8 @@ LeaferJS 的非破坏性轮廓羽化滤镜。它通过 Leafer 原生 `Filter.reg
 
 GitHub 仓库：[gws890814/leafer-x-feather](https://github.com/gws890814/leafer-x-feather)
 
+在线演示：[gws890814.github.io/leafer-x-feather](https://gws890814.github.io/leafer-x-feather/)
+
 ## 特性
 
 - 不修改源路径、图片、颜料或作者数据
@@ -144,15 +146,20 @@ npm run dev
 
 打开 `http://127.0.0.1:4186/`。Demo 可调整任意一层半径、添加/删除羽化层、切换预设，并实时查看最终 Filter JSON。
 
+构建静态 Demo：
+
+```bash
+npm run build:demo
+npm run preview:demo
+```
+
+仓库的 `main` 分支更新后，GitHub Actions 会自动构建并部署到 GitHub Pages。
+
 ```bash
 npm run check
 ```
 
-`check` 会执行类型检查、清理并构建发布产物，然后运行单元测试。浏览器像素回归可在 Demo 控制台执行：
-
-```js
-await featherDemo.runRegression()
-```
+`check` 会执行类型检查、清理并构建发布产物，然后运行单元测试。浏览器像素回归代码保留在 `demo/regression.ts`，不进入公开 Demo 的生产构建。
 
 ## 目录
 

@@ -1,10 +1,10 @@
 import { Leafer } from 'leafer-ui'
-import { FEATHER_FILTER_TYPE, createFeatherFilter } from '../src/index.ts'
+import { FEATHER_FILTER_TYPE, createFeatherFilter, installFeather } from '../src/index.ts'
 import { createDemoSamples } from './samples.ts'
 import { demoStyles } from './styles.ts'
-import { runFeatherRegression } from './regression.ts'
 
 document.head.append(Object.assign(document.createElement('style'), { textContent: demoStyles }))
+installFeather()
 
 const stage = document.querySelector<HTMLElement>('.stage')!
 const view = document.querySelector<HTMLElement>('#app')!
@@ -127,7 +127,6 @@ fitScene()
 Object.assign(window, { featherDemo: {
   leafer,
   samples,
-  runRegression: runFeatherRegression,
   setRadius(radius: number) { setLayers([radius, ...radii.slice(1)]) },
   setLayers,
 } })
