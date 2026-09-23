@@ -8,7 +8,11 @@ LeaferJS 的非破坏性轮廓羽化滤镜。它通过 Leafer 原生 `Filter.reg
 
 GitHub 仓库：[gws890814/leafer-x-feather](https://github.com/gws890814/leafer-x-feather)
 
-在线演示：[gws890814.github.io/leafer-x-feather](https://gws890814.github.io/leafer-x-feather/)
+## 在线 Demo
+
+**[打开 Leafer Feather 在线演示](https://gws890814.github.io/leafer-x-feather/)**
+
+Demo 包含图片、渐变、描边、阴影、镂空路径、线条和自由路径，可实时调整单层或多层羽化半径，并查看对应的原生 Filter JSON。图片示例使用 [LeaferJS 官方图片](https://www.leaferjs.com/image/leafer.jpg)，构建时以同源静态资源发布，避免跨域 Canvas 污染。
 
 ## 特性
 
@@ -144,7 +148,7 @@ npm install
 npm run dev
 ```
 
-打开 `http://127.0.0.1:4186/`。Demo 可调整任意一层半径、添加/删除羽化层、切换预设，并实时查看最终 Filter JSON。
+打开 `http://127.0.0.1:4186/`。Demo 可调整任意一层半径、添加/删除羽化层、切换预设，并实时查看最终 Filter JSON。线上版本见 [GitHub Pages Demo](https://gws890814.github.io/leafer-x-feather/)。
 
 构建静态 Demo：
 
