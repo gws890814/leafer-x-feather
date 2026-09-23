@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./branding/logo.svg" alt="Leafer Feather" width="760">
+</p>
+
 # @choo/leafer-x-feather
 
 LeaferJS 的非破坏性轮廓羽化滤镜。它通过 Leafer 原生 `Filter.register()` 扩展点工作，支持图片、纯色、渐变、描边、路径、容器、内外阴影和原生 JSON。
