@@ -1,6 +1,6 @@
 # 贡献指南
 
-感谢你改进 `@choo/leafer-x-feather`。
+感谢你改进 `@cgon/leafer-x-feather`。
 
 ## 本地开发
 

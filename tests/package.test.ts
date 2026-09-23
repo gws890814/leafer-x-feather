@@ -20,7 +20,8 @@ test('package metadata exposes only the public runtime surface', async () => {
   assert.equal(packageJson.repository.url, 'git+https://github.com/gws890814/leafer-x-feather.git')
   assert.deepEqual(packageJson.exports['./package.json'], './package.json')
   assert.deepEqual(packageJson.files, [
-    'dist', 'types', 'README.md', 'CHANGELOG.md', 'CONTRIBUTING.md', 'LICENSE',
+    'dist', 'types', 'branding/logo.svg', 'branding/logo-mark.svg',
+    'README.md', 'CHANGELOG.md', 'CONTRIBUTING.md', 'LICENSE',
   ])
   assert.equal(packageJson.files.includes('src'), false)
   assert.deepEqual(packageJson.sideEffects, [
@@ -37,6 +38,7 @@ test('generated declarations expose installation and filter helpers', async () =
 test('the package builds without monorepo-only imports', async () => {
   const buildScript = await readFile(resolve(packageRoot, 'build.mjs'), 'utf8')
   assert.doesNotMatch(buildScript, /\.\.\/\.\.\//)
+  assert.match(buildScript, /publicDir:\s*false/)
 })
 
 test('built ESM and CommonJS entry points expose the public API', async () => {

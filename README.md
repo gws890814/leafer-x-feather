@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="./branding/logo.svg" alt="Leafer Feather" width="760">
+  <img src="https://raw.githubusercontent.com/gws890814/leafer-x-feather/main/branding/logo.svg" alt="Leafer Feather" width="760">
 </p>
 
-# @choo/leafer-x-feather
+# @cgon/leafer-x-feather
 
 LeaferJS 的非破坏性轮廓羽化滤镜。它通过 Leafer 原生 `Filter.register()` 扩展点工作，支持图片、纯色、渐变、描边、路径、容器、内外阴影和原生 JSON。
 
@@ -30,7 +30,7 @@ Demo 包含图片、渐变、描边、阴影、镂空路径、线条和自由路
 ## 安装
 
 ```bash
-npm install @choo/leafer-x-feather @leafer-in/filter leafer-ui
+npm install @cgon/leafer-x-feather @leafer-in/filter leafer-ui
 ```
 
 也可以直接获取源码：
@@ -42,9 +42,9 @@ git clone https://github.com/gws890814/leafer-x-feather.git
 包入口会自动注册滤镜，业务代码只需导入一次：
 
 ```ts
-import '@choo/leafer-x-feather'
+import '@cgon/leafer-x-feather'
 import { Rect } from 'leafer-ui'
-import { createFeatherFilter } from '@choo/leafer-x-feather'
+import { createFeatherFilter } from '@cgon/leafer-x-feather'
 
 const rect = new Rect({
   width: 240,
@@ -57,7 +57,7 @@ const rect = new Rect({
 如需显式控制安装时机：
 
 ```ts
-import { installFeather } from '@choo/leafer-x-feather'
+import { installFeather } from '@cgon/leafer-x-feather'
 
 installFeather() // 可重复调用
 ```
