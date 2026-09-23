@@ -10,7 +10,7 @@ import {
   type IFeatherFilter,
 } from './types.ts'
 
-const INSTALLED = Symbol.for('@choo/leafer-x-feather.installed')
+const INSTALLED = Symbol.for('@cgon/leafer-x-feather.installed')
 
 /** Register the native Leafer filter. Repeated calls are safe. */
 export function installFeather() {

@@ -1,4 +1,8 @@
-# @choo/leafer-x-feather
+<p align="center">
+  <img src="https://raw.githubusercontent.com/gws890814/leafer-x-feather/main/branding/logo.svg" alt="Leafer Feather" width="760">
+</p>
+
+# @cgon/leafer-x-feather
 
 LeaferJS 的非破坏性轮廓羽化滤镜。它通过 Leafer 原生 `Filter.register()` 扩展点工作，支持图片、纯色、渐变、描边、路径、容器、内外阴影和原生 JSON。
 
@@ -7,6 +11,12 @@ LeaferJS 的非破坏性轮廓羽化滤镜。它通过 Leafer 原生 `Filter.reg
 > 本项目在方案分析、代码实现、测试和文档整理过程中使用了 **OpenAI Codex** 作为 AI 辅助工具；最终代码与发布内容由项目维护者审核和负责。
 
 GitHub 仓库：[gws890814/leafer-x-feather](https://github.com/gws890814/leafer-x-feather)
+
+## 在线 Demo
+
+**[打开 Leafer Feather 在线演示](https://gws890814.github.io/leafer-x-feather/)**
+
+Demo 包含图片、渐变、描边、阴影、镂空路径、线条和自由路径，可实时调整单层或多层羽化半径，并查看对应的原生 Filter JSON。图片示例使用 [LeaferJS 官方图片](https://www.leaferjs.com/image/leafer.jpg)，构建时以同源静态资源发布，避免跨域 Canvas 污染。
 
 ## 特性
 
@@ -20,7 +30,7 @@ GitHub 仓库：[gws890814/leafer-x-feather](https://github.com/gws890814/leafer
 ## 安装
 
 ```bash
-npm install @choo/leafer-x-feather @leafer-in/filter leafer-ui
+npm install @cgon/leafer-x-feather @leafer-in/filter leafer-ui
 ```
 
 也可以直接获取源码：
@@ -32,9 +42,9 @@ git clone https://github.com/gws890814/leafer-x-feather.git
 包入口会自动注册滤镜，业务代码只需导入一次：
 
 ```ts
-import '@choo/leafer-x-feather'
+import '@cgon/leafer-x-feather'
 import { Rect } from 'leafer-ui'
-import { createFeatherFilter } from '@choo/leafer-x-feather'
+import { createFeatherFilter } from '@cgon/leafer-x-feather'
 
 const rect = new Rect({
   width: 240,
@@ -47,7 +57,7 @@ const rect = new Rect({
 如需显式控制安装时机：
 
 ```ts
-import { installFeather } from '@choo/leafer-x-feather'
+import { installFeather } from '@cgon/leafer-x-feather'
 
 installFeather() // 可重复调用
 ```
@@ -142,17 +152,22 @@ npm install
 npm run dev
 ```
 
-打开 `http://127.0.0.1:4186/`。Demo 可调整任意一层半径、添加/删除羽化层、切换预设，并实时查看最终 Filter JSON。
+打开 `http://127.0.0.1:4186/`。Demo 可调整任意一层半径、添加/删除羽化层、切换预设，并实时查看最终 Filter JSON。线上版本见 [GitHub Pages Demo](https://gws890814.github.io/leafer-x-feather/)。
+
+构建静态 Demo：
+
+```bash
+npm run build:demo
+npm run preview:demo
+```
+
+仓库的 `main` 分支更新后，GitHub Actions 会自动构建并部署到 GitHub Pages。
 
 ```bash
 npm run check
 ```
 
-`check` 会执行类型检查、清理并构建发布产物，然后运行单元测试。浏览器像素回归可在 Demo 控制台执行：
-
-```js
-await featherDemo.runRegression()
-```
+`check` 会执行类型检查、清理并构建发布产物，然后运行单元测试。浏览器像素回归代码保留在 `demo/regression.ts`，不进入公开 Demo 的生产构建。
 
 ## 目录
 

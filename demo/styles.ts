@@ -12,7 +12,8 @@ export const demoStyles = `
   .package-header strong, .package-header small { display: block; }
   .package-header strong { font-size: 15px; }
   .package-header small { margin-top: 3px; color: #747b8b; font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; }
-  .package-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 7px; background: #6557df; color: #fff; font-size: 18px; font-weight: 800; }
+  .package-mark { display: grid; place-items: center; width: 38px; height: 38px; }
+  .package-mark img { display: block; width: 38px; height: 38px; }
 
   .switch { width: 40px; height: 24px; padding: 0; border: 0; border-radius: 12px; background: #c9ced8; }
   .switch i { display: block; width: 18px; height: 18px; margin: 3px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px #1f243340; transition: transform .15s ease; }

@@ -5,7 +5,7 @@ import { isAbsolute } from 'node:path'
 const root = fileURLToPath(new URL('.', import.meta.url))
 const externalizeDependencies = id => !id.startsWith('\0') && !id.startsWith('.') && !isAbsolute(id)
 
-await build({ configFile: false, root, build: {
+await build({ configFile: false, root, publicDir: false, build: {
   lib: {
     entry: `${root}src/index.ts`,
     name: 'LeaferX.feather',

@@ -1,5 +1,5 @@
 {
-  "name": "@choo/leafer-x-feather",
+  "name": "@cgon/leafer-x-feather",
   "version": "0.1.8",
   "description": "LeaferJS 的非破坏性轮廓羽化滤镜，支持多半径叠加与原生 JSON",
   "keywords": [
@@ -29,7 +29,7 @@
   },
   "unpkg": "./dist/feather.global.js",
   "jsdelivr": "./dist/feather.global.js",
-  "files": ["dist", "types", "README.md", "CHANGELOG.md", "CONTRIBUTING.md", "LICENSE"],
+  "files": ["dist", "types", "branding/logo.svg", "branding/logo-mark.svg", "README.md", "CHANGELOG.md", "CONTRIBUTING.md", "LICENSE"],
   "sideEffects": ["./dist/index.js", "./dist/index.cjs", "./dist/feather.global.js"],
   "publishConfig": { "access": "public" },
   "engines": { "node": ">=18" },
@@ -37,6 +37,8 @@
     "dev": "vite --host 127.0.0.1 --port 4186 --strictPort",
     "clean": "node clean.mjs",
     "build": "npm run clean && tsc -p tsconfig.build.json && node build.mjs",
+    "build:demo": "vite build --config vite.demo.config.ts",
+    "preview:demo": "vite preview --config vite.demo.config.ts --host 127.0.0.1 --port 4187 --strictPort",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
     "check": "tsc --noEmit -p tsconfig.json && npm run build && npm run test",
     "prepack": "npm run check"
